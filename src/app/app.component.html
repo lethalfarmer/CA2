@@ -1,3 +1,42 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container-fluid" ng-app="CA2" >
+  <div class="jumbotron" ng-controller="myController">
+    
+  <h1>Welcome to the BMI Calculator</h1>
+<div >
+  
+  
+    <p ng-model>Weight: {{weight}}</p>
+    <input class="dropdown" type="number" min="0" ng-model="weight">
+    <br/>
+  <br/>
+    <h3>Height</h3>
+     <p1 ng-model>Feet: </p1>
+    <input class="dropdown" type="number" min="0" max="8" ng-model="feet">
+    <br/>
+  <br/>
+    <p1 ng-model>Inches: </p1>
+    <input class="dropdown" type="number" min="0" max="11" ng-model="inches">
+    <br/>
+  <br/>
+    <p ng-model>Height in Inches: {{convertHeight(feet, inches)}}</p>
+      </input>
+    
+    <h1>Your BMI is {{calcBMI(globalHeight,weight)}}</h1>
+    
+   
+    <h3>You are {{categorize(globalHeight, weight)}}</h3>
+    
+    <div>{{category}}</div>
+    
+    
+    <div id="displayDiv"></div>
+    
+    
+  
+  
+    
+  </div>
+  
+  
+</div>
+</div>
